@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_chose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбрать обложку" />
+
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toEndOf="@+id/button_chose_image"
+        android:hint="Введите название книги" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="378dp"
+        android:layout_height="459dp"
+        android:layout_above="@+id/progress_bar"
+        android:layout_below="@+id/edit_text_book_url"
+        android:layout_marginTop="58dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_upload"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Загрузить" />
+
+    <TextView
+        android:id="@+id/text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_upload"
+        android:layout_alignBottom="@+id/button_upload"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_toEndOf="@+id/button_upload"
+        android:gravity="center"
+        android:text="Книги"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edit_text_book_url"
+        android:layout_width="299dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="100dp"
+        android:layout_alignBottom="@+id/edit_text_file_name"
+        android:layout_marginBottom="-57dp"
+        android:hint="Введите URL"
+         />
+</RelativeLayout>
